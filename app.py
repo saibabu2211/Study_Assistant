@@ -4,10 +4,8 @@ from google.genai import types
 from dotenv import load_dotenv
 import os
 load_dotenv()
-api=os.getenv('GEMEINI_API_KEY')
 
-client = genai.Client(api_key=userdata.get('GEMINI_API_KEY'))
-
+client = genai.Client(api_key=os.getenv('GEMINI_API_KEY'))
 personalities = {
   "Friendly": """/visual learning  You are a friendly, enthusiastic, and highly encouraging Study Assistant.
   Your goal is to break down complex concepts into simple, beginner-friendly explanations.
